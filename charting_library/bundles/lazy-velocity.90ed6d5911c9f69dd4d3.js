@@ -841,17 +841,16 @@
                     return r && u(h.Lists.units) ? r : '';
                   },
                   fixColors: function (e) {
-                    return e.replace(/(rgba?\(\s*)?(\b[a-z]+\b)/g, function (
-                      e,
-                      t,
-                      r,
-                    ) {
-                      return h.Lists.colorNames.hasOwnProperty(r)
-                        ? (t || 'rgba(') +
-                            h.Lists.colorNames[r] +
-                            (t ? '' : ',1)')
-                        : t + r;
-                    });
+                    return e.replace(
+                      /(rgba?\(\s*)?(\b[a-z]+\b)/g,
+                      function (e, t, r) {
+                        return h.Lists.colorNames.hasOwnProperty(r)
+                          ? (t || 'rgba(') +
+                              h.Lists.colorNames[r] +
+                              (t ? '' : ',1)')
+                          : t + r;
+                      },
+                    );
                   },
                   cleanRootPropertyValue: function (e, t) {
                     return (
@@ -1647,12 +1646,12 @@
                                     o &&
                                       o.tweensContainer &&
                                       !1 !== i &&
-                                      d.each(o.tweensContainer, function (
-                                        e,
-                                        t,
-                                      ) {
-                                        t.endValue = t.currentValue;
-                                      }),
+                                      d.each(
+                                        o.tweensContainer,
+                                        function (e, t) {
+                                          t.endValue = t.currentValue;
+                                        },
+                                      ),
                                       N.push(e);
                                   } else
                                     ('finish' !== l && 'finishAll' !== l) ||

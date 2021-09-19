@@ -1,4 +1,3 @@
-/* eslint-disable */
 var t = function () {
   return (t =
     Object.assign ||
@@ -36,7 +35,7 @@ var o = {
     height: 500,
     interval: '1D',
     timezone: 'Etc/UTC',
-    container_id: '',
+    container: '',
     library_path: '',
     locale: 'en',
     widgetbar: {
@@ -69,7 +68,7 @@ var o = {
     favorites: { intervals: [], chartTypes: [] },
   };
 function i() {
-  return 'CL v17.024 (internal id cbd3ae28 @ 2020-11-11T12:45:30.675Z)';
+  return 'CL v19.039 (internal id 50355760 @ 2021-08-20T14:37:14.915Z)';
 }
 var r = (function () {
   function t(t) {
@@ -274,8 +273,23 @@ var r = (function () {
     (t.prototype.getAllFeatures = function () {
       return this._innerWindow().getAllFeatures();
     }),
-    (t.prototype.takeClientScreenshot = function () {
-      return this._innerAPI().takeClientScreenshot();
+    (t.prototype.clearUndoHistory = function () {
+      return this._innerAPI().clearUndoHistory();
+    }),
+    (t.prototype.undo = function () {
+      return this._innerAPI().undo();
+    }),
+    (t.prototype.redo = function () {
+      return this._innerAPI().redo();
+    }),
+    (t.prototype.startFullscreen = function () {
+      this._innerAPI().startFullscreen();
+    }),
+    (t.prototype.exitFullscreen = function () {
+      this._innerAPI().exitFullscreen();
+    }),
+    (t.prototype.takeClientScreenshot = function (t) {
+      return this._innerAPI().takeClientScreenshot(t);
     }),
     (t.prototype._innerAPI = function () {
       return this._innerWindow().tradingViewApi;
@@ -289,24 +303,29 @@ var r = (function () {
     }),
     (t.prototype._create = function () {
       var t = this,
-        e = this._render(),
-        o = document.getElementById(this._options.container_id);
-      if (null === o)
-        throw new Error(
-          'There is no such element - #' + this._options.container_id,
+        e = this._render();
+      this._options.container_id &&
+        console.warn(
+          '`container_id` is now deprecated. Please use `container` instead to either still pass a string or an `HTMLElement`.',
         );
-      (o.innerHTML = e), (this._iFrame = o.querySelector('#' + this._id));
-      var n = this._iFrame;
+      var o = this._options.container_id || this._options.container,
+        n = 'string' == typeof o ? document.getElementById(o) : o;
+      if (null === n)
+        throw new Error(
+          'There is no such element - #' + this._options.container,
+        );
+      (n.innerHTML = e), (this._iFrame = n.querySelector('#' + this._id));
+      var i = this._iFrame;
       (this._options.autosize || this._options.fullscreen) &&
-        ((n.style.width = '100%'),
-        this._options.fullscreen || (n.style.height = '100%')),
+        ((i.style.width = '100%'),
+        this._options.fullscreen || (i.style.height = '100%')),
         window.addEventListener('resize', this._onWindowResize),
         this._onWindowResize(),
         (this._innerWindowLoaded = new Promise(function (t) {
           var e = function () {
-            n.removeEventListener('load', e, !1), t();
+            i.removeEventListener('load', e, !1), t();
           };
-          n.addEventListener('load', e, !1);
+          i.addEventListener('load', e, !1);
         })),
         this._innerWindowLoaded.then(function () {
           t._innerWindow().widgetReady(function () {
@@ -353,7 +372,11 @@ var r = (function () {
         }),
         this._options.saved_data)
       )
-        t[this._id].chartContent = { json: this._options.saved_data };
+        (t[this._id].chartContent = { json: this._options.saved_data }),
+          this._options.saved_data_meta_info &&
+            (t[
+              this._id
+            ].chartContentExtendedData = this._options.saved_data_meta_info);
       else if (!this._options.load_last_chart && !this._options.symbol)
         throw new Error(
           "Symbol is not defined: either 'symbol' or 'load_last_chart' option must be set",
@@ -361,7 +384,7 @@ var r = (function () {
       var e =
         (this._options.library_path || '') +
         (encodeURIComponent(this._options.locale) +
-          '-tv-chart.cbd3ae28.html#symbol=') +
+          '-tv-chart.50355760.html#symbol=') +
         encodeURIComponent(this._options.symbol || '') +
         '&interval=' +
         encodeURIComponent(this._options.interval) +

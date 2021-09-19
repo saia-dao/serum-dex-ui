@@ -171,11 +171,13 @@
                       key: 'listenClick',
                       value: function (t) {
                         var e = this;
-                        this.listener = (0, c.default)(t, 'click', function (
+                        this.listener = (0, c.default)(
                           t,
-                        ) {
-                          return e.onClick(t);
-                        });
+                          'click',
+                          function (t) {
+                            return e.onClick(t);
+                          },
+                        );
                       },
                     },
                     {
