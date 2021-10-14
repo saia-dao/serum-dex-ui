@@ -1,22 +1,22 @@
 import { Menu } from 'antd';
-import React from 'react';
 
-
-export default function DynamicMenu() {
+export const dynamicMenus = () => {
     return (
-<>
+
     <Menu.SubMenu key="COLLECTIBLE" title="COLLECTIBLE">
         <Menu.ItemGroup title="POSTER">
             <Menu.Item key="AYXTVttPfhYmn3jryX5XbRjwPK2m9445mbN2iLyRD6nq">Discovery of Iris | DOI</Menu.Item>
             <Menu.Item key="5Erzgrw9pTjNWLeqHp2sChJq7smB7WXRQYw9wvkvA59t">The Heart of Star Atlas | HOSA</Menu.Item>
             <Menu.Item key="DXPv2ZyMD6Y2mDenqYkAhkvGSjNahkuMkm4zv6DqB7RF">The Convergence War | TCW</Menu.Item>
-            <Menu.Item key="73d9N7BbWVKBG6A2xwwwEHcxzPB26YzbMnRjue3DPzqs">Short Story of a Lost Astronaut | LOST</Menu.Item>
+            <Menu.Item key="73d9N7BbWVKBG6A2xwwwEHcxzPB26YzbMnRjue3DPzqs">Short Story of a Lost Astronaut |
+                LOST</Menu.Item>
             <Menu.Item key="AM9sNDh48N2qhYSgpA58m9dHvrMoQongtyYu2u2XoYTc">B ❤ P | LOVE</Menu.Item>
             <Menu.Item key="BJiV2gCLwMvj2c1CbhnMjjy68RjqoMzYT8brDrpVyceA">The Assassination of Paizul | MRDR</Menu.Item>
             <Menu.Item key="7JzaEAuVfjkrZyMwJgZF5aQkiEyVyCaTWA3N1fQK7Y6V">Paizul Funeral Procession | PFP</Menu.Item>
             <Menu.Item key="8yQzsbraXJFoPG5PdX73B8EVYFuPR9aC2axAqWearGKu">Ahr Visits Earth | AVE</Menu.Item>
             <Menu.Item key="AVHndcEDUjP9Liz5dfcvAPAMffADXG6KMPn8sWB1XhFQ">The Last Stand | TLS</Menu.Item>
-            <Menu.Item key="FZ9xhZbkt9bKKVpWmFxRhEJyzgxqU5w5xu3mXcF6Eppe">The Signing of the Peace Treaty | SPT</Menu.Item>
+            <Menu.Item key="FZ9xhZbkt9bKKVpWmFxRhEJyzgxqU5w5xu3mXcF6Eppe">The Signing of the Peace Treaty |
+                SPT</Menu.Item>
             <Menu.Item key="4jN1R453Acv9egnr7Dry3x9Xe3jqh1tqz5RokniaeVhy">The Peacebringers Archive | PBA</Menu.Item>
             <Menu.Item key="J99HsFQEWKR3UiFQpKTnF11iaNiR1enf2LxHfgsbVc59">Ustur Wod.bod | UWB</Menu.Item>
             <Menu.Item key="HdvXMScwAQQh9pEvLZjuaaeJcLTmixxYoMFefeqHFn2E">Om Photoli | OMPH</Menu.Item>
@@ -54,17 +54,18 @@ export default function DynamicMenu() {
             <Menu.Item key="7sEn3AMv5oHmbdXDXVfTTEthWEYdiaDWGAvkKcoygN7U">PhotoniX Provenance | FM-PP</Menu.Item>
             <Menu.Item key="EJ8MX3M4xsgAn8uZkLNyp76zAqn9uY18NtitASoYoRyS">TTT 300K Animoca | FM-T3ANI</Menu.Item>
             <Menu.Item key="45SyRzGWW2cr3Y3637xzRh3Hr4KciMheQUpRphkcLoAX">TTT 300K FTX | FM-T3FTX</Menu.Item>
-            <Menu.Item key="ErC5ux4t4UA437h22GpYMEZEDjAUvx2m6aQJ4Fzjcc5n">TTT 300K SERUM  | FM-T3SR</Menu.Item>
-            <Menu.Item key="7PFvfkQip26mzD5gvipjNLqpyzFyR8qvrndF7u1jFfaq">NXT le]V[el DS Bodysuit  | FM-NLDB</Menu.Item>
+            <Menu.Item key="ErC5ux4t4UA437h22GpYMEZEDjAUvx2m6aQJ4Fzjcc5n">TTT 300K SERUM | FM-T3SR</Menu.Item>
+            <Menu.Item key="7PFvfkQip26mzD5gvipjNLqpyzFyR8qvrndF7u1jFfaq">NXT le]V[el DS Bodysuit | FM-NLDB</Menu.Item>
             <Menu.Item key="52HCo9MRuEj6sKRS9Me2UriCQvaeL4CQe7DkBSm1bW7K">COSMIC ORIGIN 92 | FM-CO92</Menu.Item>
             <Menu.Item key="HSJ8Jv8MsxxQrdspBtT4tQvTrerAynmCxSokBK7YC9UR">TTT 300K CryptoKickers | FM-T3CK</Menu.Item>
             <Menu.Item key="3KYW1LYzfZfBupRcuS7KjH84jCWdX1s42xvvDF3keGn2">TTT 300K Raydium | FM-T3RAY</Menu.Item>
             <Menu.Item key="C5UdbBXYyeDFPcNjw9zQkcWadzP6tgKoCp7YxhqGcJp1">TTT 300K ATLAS | FM-T3ATLAS</Menu.Item>
-            <Menu.Item key="98238GZrjECJDpowVCn1EaYtJpR7o5HMszevTFD7brEp">TTT 300K SOLANA  | FM-T3SOL</Menu.Item>
+            <Menu.Item key="98238GZrjECJDpowVCn1EaYtJpR7o5HMszevTFD7brEp">TTT 300K SOLANA | FM-T3SOL</Menu.Item>
             <Menu.Item key="GCsYJjV1BYtiaGyjFgkadutaNKYYDPDP8anP95h2tbTc">TTT 300K STEP.finance | FM-T3STEP</Menu.Item>
             <Menu.Item key="CL5ScWqMDcy1dvvPXE4XAcBdTYDc8x8F8www29K2xNeA">TTT 300K Phantom | FM-T3PH</Menu.Item>
             <Menu.Item key="FbxKfbcKaMkHhzP69kUYRYDLHqppgiGEWhxb5bbFQX8z">PRIMORDIAL GLO | FM-PLG</Menu.Item>
-            <Menu.Item key="99g7oerCB6QUP8BKhuKZP3T4RnacUV3Tkbs1f4Q3i3Av">TTT 300K THE_FAB_RIC_ANT  | FM-T3FAB</Menu.Item>
+            <Menu.Item key="99g7oerCB6QUP8BKhuKZP3T4RnacUV3Tkbs1f4Q3i3Av">TTT 300K THE_FAB_RIC_ANT |
+                FM-T3FAB</Menu.Item>
         </Menu.ItemGroup>
         <Menu.ItemGroup title="CHARM">
             <Menu.Item key="GxJDcyN83nWmcsC5arPpsuB8NEts1n6zK6FTDtDw29z">Vintage Orbiting Satellite | CHMVOS</Menu.Item>
@@ -129,5 +130,5 @@ export default function DynamicMenu() {
             <Menu.Item key="4Gg2WPaYbZNpy86tMhmw6w4CsiVupnNXwvbsLREMB5UQ">Council Meta-PAS | CMPAS</Menu.Item>
         </Menu.ItemGroup>
     </Menu.SubMenu>
-</>
-)};
+)}
+
