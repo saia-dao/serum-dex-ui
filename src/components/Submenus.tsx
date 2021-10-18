@@ -2,10 +2,10 @@ import { Menu } from 'antd';
 import React from 'react';
 
 
-export default function DynamicMenu() {
+export default function DynamicMenu(props) {
     return (
 <>
-    <Menu.SubMenu key="COLLECTIBLE" title="COLLECTIBLE">
+    <Menu.SubMenu key="COLLECTIBLE" title="COLLECTIBLE" {...props}>
         <Menu.ItemGroup title="POSTER">
             <Menu.Item key="AYXTVttPfhYmn3jryX5XbRjwPK2m9445mbN2iLyRD6nq">Discovery of Iris | DOI</Menu.Item>
             <Menu.Item key="5Erzgrw9pTjNWLeqHp2sChJq7smB7WXRQYw9wvkvA59t">The Heart of Star Atlas | HOSA</Menu.Item>
