@@ -1,7 +1,6 @@
 import { Menu } from 'antd';
 import React from 'react';
 
-
 export default function DynamicMenu(props) {
     return (
 <>
