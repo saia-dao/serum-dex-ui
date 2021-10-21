@@ -18,7 +18,7 @@ import { Connection } from '@solana/web3.js';
 import WalletConnect from './WalletConnect';
 import AppSearch from './AppSearch';
 import { getTradePageUrl } from '../utils/markets';
-import dynamicMenu from './Submenus';
+import DynamicMenu from './Submenus';
 
 const Wrapper = styled.div`
   display: flex;
@@ -167,7 +167,7 @@ export default function TopBar() {
               <Menu.Item key="HxFLKUAmAMLz1jtT3hbvCMELwH5H9tpM2QugP8sKyfhW">Star Atlas DAO | POLIS </Menu.Item>
           </Menu.SubMenu>
 
-          { dynamicMenu }
+          <DynamicMenu/>
 
           {connected && (!searchFocussed || location.pathname === '/balances') && (
             <Menu.Item key="/balances" style={{ margin: '0 10px' }}>

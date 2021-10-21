@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import { Menu } from 'antd';
 
 function Nfts() {
-
-    const GALAXY = "https://galaxy.staratlas.com/nfts";
+    const GALAXY = "galaxy.json";
     const [nftData, setNftData] = useState<any[]>([]);
     const getNfts = () => {
         fetch(GALAXY
@@ -24,13 +24,7 @@ function Nfts() {
     useEffect(() => {
         getNfts()
     }, [])
-    return (
-        <div className="NFTS">
-            {
-                nftData && nftData.length > 0 && nftData.map((item) => <p>{item?.name}</p>)
-            }
-        </div>
-    );
+    return nftData
 }
 
 export default Nfts;

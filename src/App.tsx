@@ -8,13 +8,13 @@ import ErrorBoundary from './components/ErrorBoundary';
 import { Routes } from './routes';
 import { PreferencesProvider } from './utils/preferences';
 import { ReferrerProvider } from './utils/referrer';
-import Nfts from './utils/nfts';
+
 
 
 export default function App() {
   return (
     <Suspense fallback={() => <Spin size="large" />}>
-      <Nfts />
+      {/*<Nfts />*/}
       <GlobalStyle />
       <ErrorBoundary>
         <ConnectionProvider>
