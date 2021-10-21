@@ -13,11 +13,9 @@ function Nfts() {
                 }
             })
             .then(function (response) {
-                console.log(response)
                 return response.json();
             })
             .then(function (nftJson) {
-                console.log(nftJson);
                 setNftData(nftJson)
             });
     }

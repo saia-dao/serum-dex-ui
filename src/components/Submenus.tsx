@@ -23,28 +23,21 @@ function buildSubmenus(data, props) {
 
     return (
         <>
-            {Object.keys(submenuArray).map(function (itemType) {
+            {Object.keys(submenuArray).map((itemType) => {
                 return (
-                    <Menu.SubMenu title={itemType.toUpperCase()} {...props}>
-                            {/*console.log(Object.keys(submenuArray[itemType]))*/}
-                            {Object.keys(submenuArray[itemType]).map(function (type) {
+                    <Menu.SubMenu key={itemType} title={itemType.toUpperCase()} {...props}>
+                            {Object.keys(submenuArray[itemType]).map((type) => {
                                 return (
-                                    <Menu.ItemGroup title={type.toUpperCase()}>
-                                        {Object.keys(submenuArray[itemType][type]).map(function (nft) {
-                                            console.log(nft)
-                                            return <Menu.Item key="blerg">{nft}</Menu.Item>
-                                            }
-                                        )}
-
+                                    <Menu.ItemGroup key={type} title={type.toUpperCase()}>
+                                        {Object.keys(submenuArray[itemType][type]).map((nft) => {
+                                            return <Menu.Item key={nft}>{nft}</Menu.Item>
+                                        })}
                                     </Menu.ItemGroup>
-                                )}
-                            )}
-
+                                )
+                            })}
                     </Menu.SubMenu>
                 )
-            })
-        }
-
+            })}
         </>
     )
 
@@ -59,6 +52,6 @@ export default function DynamicMenu(props) {
 
     return (
 <>
-    {buildSubmenus(Nfts(), {...props})}
+    {buildSubmenus(Nfts(), props)}
 </>
 )};
