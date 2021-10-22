@@ -1,9 +1,11 @@
 import { Menu } from 'antd';
 import React from 'react';
 
-import Nfts from '../utils/nfts';
+import {ItemDisplay} from "../utils/NftProvider";
 
 export default function buildSubmenus() {
+    let data = ItemDisplay().data['value'];
+
     let submenuArray = {};
 
     const set = (obj, path, val) => {
@@ -15,30 +17,36 @@ export default function buildSubmenus() {
         lastObj[lastKey] = val;
     };
 
-    Nfts().map(function(nft) {
-        const path = '' + nft.attributes.itemType + '.' + nft.attributes.class + '.' + nft.name;
-        const val = nft.name + " | " + nft.symbol;
-        set(submenuArray, path, val);
-        return;
-    });
+    if (data != undefined) {
+        data.map(function(nft) {
+            const path = '' + nft.attributes.itemType + '.' + nft.attributes.class + '.' + nft.name;
+            const val = nft.name + " | " + nft.symbol;
+            set(submenuArray, path, val);
+            return;
+        });
 
-    let dynamicMenu = Object.keys(submenuArray).map((itemType) => {
+        let dynamicMenu = Object.keys(submenuArray).map((itemType) => {
 
-        return (
-            <Menu.SubMenu key={itemType} title={itemType.toUpperCase()}>
-                {Object.keys(submenuArray[itemType]).map((type) => {
-                    return (
-                        <Menu.ItemGroup key={type} title={type.toUpperCase()}>
-                            {Object.keys(submenuArray[itemType][type]).map((nft) => {
-                                return <Menu.Item key={nft}>{nft}</Menu.Item>
-                            })}
-                        </Menu.ItemGroup>
-                    )
-                })}
-            </Menu.SubMenu>
-        )
-    })
+            return (
+                <Menu.SubMenu key={itemType} title={itemType.toUpperCase()}>
+                    {Object.keys(submenuArray[itemType]).map((type) => {
+                        return (
+                            <Menu.ItemGroup key={type} title={type.toUpperCase()}>
+                                {Object.keys(submenuArray[itemType][type]).map((nft) => {
+                                    return <Menu.Item key={nft}>{nft}</Menu.Item>
+                                })}
+                            </Menu.ItemGroup>
+                        )
+                    })}
+                </Menu.SubMenu>
+            )
+        })
 
-    return dynamicMenu;
+        return dynamicMenu;
+    }
+
+
+
+
 
 }

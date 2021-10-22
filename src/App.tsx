@@ -8,15 +8,15 @@ import ErrorBoundary from './components/ErrorBoundary';
 import { Routes } from './routes';
 import { PreferencesProvider } from './utils/preferences';
 import { ReferrerProvider } from './utils/referrer';
-
+import {NftDataProvider} from "./utils/NftProvider";
 
 
 export default function App() {
   return (
     <Suspense fallback={() => <Spin size="large" />}>
-      {/*<Nfts />*/}
       <GlobalStyle />
       <ErrorBoundary>
+        <NftDataProvider>
         <ConnectionProvider>
           <ReferrerProvider>
             <WalletProvider>
@@ -28,6 +28,7 @@ export default function App() {
             </WalletProvider>
           </ReferrerProvider>
         </ConnectionProvider>
+        </NftDataProvider>
       </ErrorBoundary>
     </Suspense>
   );
