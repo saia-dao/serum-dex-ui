@@ -18,20 +18,7 @@ import { Connection } from '@solana/web3.js';
 import WalletConnect from './WalletConnect';
 import AppSearch from './AppSearch';
 import { getTradePageUrl } from '../utils/markets';
-// import DynamicMenu from './Submenus';
-
-import Nfts from '../utils/nfts';
-
-let submenuArray = {};
-
-const set = (obj, path, val) => {
-  const keys = path.split('.');
-  const lastKey = keys.pop();
-  const lastObj = keys.reduce((obj, key) =>
-          obj[key] = obj[key] || {},
-      obj);
-  lastObj[lastKey] = val;
-};
+import buildSubmenus from "./Submenus";
 
 const Wrapper = styled.div`
   display: flex;
@@ -145,31 +132,6 @@ export default function TopBar() {
     ? location.pathname
     : getTradePageUrl();
 
-
-  Nfts().map(function(nft) {
-    const path = '' + nft.attributes.itemType + '.' + nft.attributes.class + '.' + nft.name; // fix this "markets[0]" dependency
-    const val = nft.name + " | " + nft.symbol;
-    set(submenuArray, path, val);
-    return;
-  });
-
-  let dynamicMenu = Object.keys(submenuArray).map((itemType) => {
-
-    return (
-        <Menu.SubMenu key={itemType} title={itemType.toUpperCase()}>
-          {Object.keys(submenuArray[itemType]).map((type) => {
-            return (
-                <Menu.ItemGroup key={type} title={type.toUpperCase()}>
-                  {Object.keys(submenuArray[itemType][type]).map((nft) => {
-                    return <Menu.Item key={nft}>{nft}</Menu.Item>
-                  })}
-                </Menu.ItemGroup>
-            )
-          })}
-        </Menu.SubMenu>
-    )
-  })
-
   return (
     <>
       <CustomClusterEndpointDialog
@@ -205,8 +167,7 @@ export default function TopBar() {
               <Menu.Item key="HxFLKUAmAMLz1jtT3hbvCMELwH5H9tpM2QugP8sKyfhW">Star Atlas DAO | POLIS </Menu.Item>
           </Menu.SubMenu>
 
-          {/*<DynamicMenu/>*/}
-          {dynamicMenu}
+          {buildSubmenus()}
 
           {connected && (!searchFocussed || location.pathname === '/balances') && (
             <Menu.Item key="/balances" style={{ margin: '0 10px' }}>
