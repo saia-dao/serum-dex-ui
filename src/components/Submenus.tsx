@@ -16,8 +16,8 @@ const set = (obj, path, val) => {
 
 function buildSubmenus(data, props) {
     data.map(function(nft) {
-        let path = '' + nft.attributes.itemType + '.' + nft.attributes.class + '.' + nft.name; // fix this "markets[0]" dependency
-        let val = nft.name + " | " + nft.symbol;
+        const path = '' + nft.attributes.itemType + '.' + nft.attributes.class + '.' + nft.name; // fix this "markets[0]" dependency
+        const val = nft.name + " | " + nft.symbol;
         set(submenuArray, path, val);
     });
 
@@ -28,7 +28,7 @@ function buildSubmenus(data, props) {
                     <Menu.SubMenu key={itemType} title={itemType.toUpperCase()} {...props}>
                             {Object.keys(submenuArray[itemType]).map((type) => {
                                 return (
-                                    <Menu.ItemGroup key={type} title={type.toUpperCase()}>
+                                    <Menu.ItemGroup key={type} title={type.toUpperCase()} >
                                         {Object.keys(submenuArray[itemType][type]).map((nft) => {
                                             return <Menu.Item key={nft}>{nft}</Menu.Item>
                                         })}
@@ -40,16 +40,9 @@ function buildSubmenus(data, props) {
             })}
         </>
     )
-
-
-
-
-
 }
 
 export default function DynamicMenu(props) {
-
-
     return (
 <>
     {buildSubmenus(Nfts(), props)}
