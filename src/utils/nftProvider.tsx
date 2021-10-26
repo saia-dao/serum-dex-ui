@@ -14,7 +14,6 @@ export const ItemDisplay = () => {
     return {data};
 };
 
-
 export type ContextState =
     { status: 'LOADING' | 'ERROR'}
 |   { status: 'LOADED'; value: Response };
@@ -28,9 +27,6 @@ export const useItemData = (): ContextState => {
     }
     return contextState
 };
-
-
-
 
 export const NftDataProvider: React.FC = (props) => {
     const [state, setState] =
@@ -48,6 +44,7 @@ export const NftDataProvider: React.FC = (props) => {
                     }
                 });
             if (result.ok) {
+                console.log("GALAXY LOADED")
                 setState({
                     status: 'LOADED',
                     value: await result.json(),

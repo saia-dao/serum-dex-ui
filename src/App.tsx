@@ -8,7 +8,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import { Routes } from './routes';
 import { PreferencesProvider } from './utils/preferences';
 import { ReferrerProvider } from './utils/referrer';
-import {NftDataProvider} from "./utils/NftProvider";
+import {NftDataProvider} from "./utils/nftProvider";
 
 
 export default function App() {
