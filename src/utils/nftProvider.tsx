@@ -1,16 +1,10 @@
 import React from "react";
 
+//TODO: change to Star Atlas feed before merge
 const GALAXY = "galaxy.json";
 
 export const ItemDisplay = () => {
-    const data = useItemData();
-
-    // if (data.status === 'LOADING') {
-    //     return <Spin/>
-    // } else if (data.status === 'ERROR') {
-    //     return <div>Unable to load item data</div>;
-    // }
-
+    const data = useNftData();
     return {data};
 };
 
@@ -20,7 +14,7 @@ export type ContextState =
 
 const Context = React.createContext<ContextState | null>(null);
 
-export const useItemData = (): ContextState => {
+export const useNftData = (): ContextState => {
     const contextState = React.useContext(Context);
     if (contextState === null) {
         throw new Error('UseItemData must be used within an NftDataProvider tag');
@@ -44,7 +38,6 @@ export const NftDataProvider: React.FC = (props) => {
                     }
                 });
             if (result.ok) {
-                console.log("GALAXY LOADED")
                 setState({
                     status: 'LOADED',
                     value: await result.json(),
@@ -61,10 +54,3 @@ export const NftDataProvider: React.FC = (props) => {
         </Context.Provider>
     );
 };
-
-
-// export const TestItemDataProvider: React.FC<{value: ContextState}> = (props) => (
-//     <Context.Provider value={props.value}>
-//         {props.children}
-//     </Context.Provider>
-// )

@@ -5,24 +5,14 @@ import {ItemDisplay} from '../utils/nftProvider';
 
 export default function buildSubmenus() {
     const data = ItemDisplay().data['value'];
-    let categories = {};
     if (data !== undefined) {
+        let categories = {};
 
-        data.map(function(nft) {
-            console.log(nft.name, nft.attributes);
-            const itemType = nft['attributes']['itemType'];
-            const classType = nft['attributes']['class'];
-
-            if (!categories[itemType]) {
-                categories[itemType] = {}
-            } else if (!categories[itemType][classType]) {
-                categories[itemType][classType] = [nft]
-            } else {
-                categories[itemType][classType].push(nft);
-            }
+        data.map(function (nft) {
+            let obj = categories;
+            let key = [nft.attributes.itemType, nft.attributes.class];
+            key.reduce((obj, key) => (obj[key] = obj[key] || []), obj).push(nft);
         });
-
-        console.log("categories", categories)
 
         let dynamicMenu = Object.keys(categories).map((itemType) => {
             return (
