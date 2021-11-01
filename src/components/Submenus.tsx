@@ -1,6 +1,5 @@
 import { Menu } from 'antd';
 import React from 'react';
-
 import {ItemDisplay} from '../utils/nftProvider';
 
 export default function buildSubmenus() {

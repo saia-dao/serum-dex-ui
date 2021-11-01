@@ -2,7 +2,7 @@ import * as BufferLayout from 'buffer-layout';
 import {AccountInfo, Connection, PublicKey} from '@solana/web3.js';
 import {WRAPPED_SOL_MINT} from '@project-serum/serum/lib/token-instructions';
 import {TokenAccount} from './types';
-import {TOKEN_MINTS} from '@project-serum/serum';
+import {TOKEN_MINTS} from '../tokenlist/tokens_and_markets';
 import {useAllMarkets, useCustomMarkets, useTokenAccounts} from './markets';
 import {getMultipleSolanaAccounts} from './send';
 import {useConnection} from './connection';

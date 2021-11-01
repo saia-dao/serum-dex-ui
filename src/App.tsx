@@ -10,7 +10,6 @@ import { PreferencesProvider } from './utils/preferences';
 import { ReferrerProvider } from './utils/referrer';
 import {NftDataProvider} from "./utils/nftProvider";
 
-
 export default function App() {
   return (
     <Suspense fallback={() => <Spin size="large" />}>
