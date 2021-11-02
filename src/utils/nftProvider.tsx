@@ -1,7 +1,5 @@
 import React from "react";
-
-//TODO: change to Star Atlas feed before merge
-const GALAXY = "galaxy.json";
+import {GALAXY} from "./galaxy";
 
 export const ItemDisplay = () => {
     const data = useNftData();
@@ -30,21 +28,11 @@ export const NftDataProvider: React.FC = (props) => {
         setState({status: 'LOADING'});
 
         (async (): Promise<void> => {
-            const result = await fetch(GALAXY
-                , {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    }
-                });
-            if (result.ok) {
-                setState({
-                    status: 'LOADED',
-                    value: await result.json(),
-                });
-            } else {
-                setState({status: 'ERROR'})
-            }
+            const result = await GALAXY();
+            setState({
+                status: 'LOADED',
+                value: result,
+            })
         })();
     }, []);
 

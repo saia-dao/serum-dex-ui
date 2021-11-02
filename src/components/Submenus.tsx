@@ -2,7 +2,7 @@ import { Menu } from 'antd';
 import React from 'react';
 import {ItemDisplay} from '../utils/nftProvider';
 
-export default function buildSubmenus() {
+export default function buildSubmenus(){
     const data = ItemDisplay().data['value'];
     if (data !== undefined) {
         let categories = {};

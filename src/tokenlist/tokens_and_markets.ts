@@ -1,6 +1,33 @@
 import { PublicKey } from '@solana/web3.js';
 import Markets from './markets.json';
 import TokenMints from './token-mints.json';
+import {GALAXY} from "../utils/galaxy";
+
+// const galaxy = Promise.resolve(GALAXY()).then((value) => {
+//     console.log(value);
+//     return value
+// });
+
+// const galaxy = async () => {
+//     const value = await GALAXY();
+//     return value;
+// };
+
+let test = "not set";
+
+const galaxy = GALAXY().then(response => {
+    test = response;
+})
+
+// GALAXY().then( value => {
+//
+// })
+
+console.log(test);
+
+// const DynMarkets = galaxy.map((item) => {
+//
+// })
 
 export const PROGRAM_LAYOUT_VERSIONS = {
     '4ckmDgGdxQoPDLUkDT3vHgSAkzA3QRdNq5ywwY4sUSJn': 1,
@@ -12,6 +39,7 @@ export const PROGRAM_LAYOUT_VERSIONS = {
 export function getLayoutVersion(programId: PublicKey) {
     return PROGRAM_LAYOUT_VERSIONS[programId.toString()] || 3;
 }
+
 
 export const TOKEN_MINTS: Array<{
     address: PublicKey;
