@@ -272,6 +272,10 @@ export default function TopBar() {
               <Menu.Item key="4n8786v44qagL31kyF2VZMZkhoUQkAFpAUTn138wuQyi">OPAL JETJET | OPALJJ/ATLAS</Menu.Item>
               <Menu.Item key="2W6ff8LajAwekXVxDARGQ9QFNcRbxmJPE2p3eNsGR7Qu">OPAL JETJET | OPALJJ/USDC</Menu.Item>
             </Menu.ItemGroup>
+            <Menu.ItemGroup title="SMALL">
+              <Menu.Item key="HcYLMMtf55i1X8pXkEppp6e8n8GKTeJHaGfXdh8AJnte">VZUS AMBWE | VZUSAM/ATLAS</Menu.Item>
+              <Menu.Item key="8qyeFRyR5255UFTVtSrX9Qad6S4A8kaehc4wdizFDmJe">VZUS AMBWE | VZUSAM/USDC</Menu.Item>
+            </Menu.ItemGroup>
             <Menu.ItemGroup title="COMMANDER">
               <Menu.Item key="AGeUtKq71xhttwu1PS7uZ7pwXhKXAUFFwiVzYvkzoYaF">PEARCE C11 | PC11/ATLAS</Menu.Item>
               <Menu.Item key="D4ciuyvZpcPnaBpdpbRrVN1pKVMgZ8vEgc5PSA1ZbgaH">PEARCE C11 | PC11/USDC</Menu.Item>
@@ -279,8 +283,6 @@ export default function TopBar() {
               <Menu.Item key="2qbJNR8kDe6fQ38pnN6jyybinnKimNEixJ71tkPfJA3a">FIMBUL ECOS TREEARROW | FBLETR/USDC</Menu.Item>
             </Menu.ItemGroup>
             <Menu.ItemGroup title="SMALL">
-              <Menu.Item key="HcYLMMtf55i1X8pXkEppp6e8n8GKTeJHaGfXdh8AJnte">VZUS AMBWE | VZUSAM/ATLAS</Menu.Item>
-              <Menu.Item key="8qyeFRyR5255UFTVtSrX9Qad6S4A8kaehc4wdizFDmJe">VZUS AMBWE | VZUSAM/USDC</Menu.Item>
               <Menu.Item key="FifgJPRZdsX8LwME3XnNavhCcDLm1LxdynFrffyXiYxA">TUFA FEIST | TUFAFE/ATLAS</Menu.Item>
               <Menu.Item key="p6sDGUoCT2wMGsEQ9ZEmw7hdXm3PU539KUL5ouV5GvF">TUFA FEIST | TUFAFE/USDC</Menu.Item>
               <Menu.Item key="5iYpFwUxYj4wgBTZsz6RpCaVFCSy7NfPa3LmSUDKQpqs">PEARCE X6 | PX6/ATLAS</Menu.Item>
@@ -339,10 +341,10 @@ export default function TopBar() {
           </Menu.SubMenu>
           <Menu.SubMenu title="RESOURCE">
             <Menu.ItemGroup title="CONSUMABLE">
-              <Menu.Item key="QeL22q71pdXzDSj9ZEbkEMZ7PfnxD81pfX4YZpDsQoq">AMMUNITION | AMMO/ATLAS</Menu.Item>
-              <Menu.Item key="7kpYMW2Fjbu2vnUN783KKa4MmspguVxHWXh8xinYhmrk">TOOLKIT | TOOL/ATLAS</Menu.Item>
-              <Menu.Item key="262gYdLasTTDy7yiriwpNzo8re58A6EPyigF9SCETs3K">FOOD | FOOD/ATLAS</Menu.Item>
-              <Menu.Item key="Bqhy9LVPjucLf6cimuj3gHfg9kH1J8vhgv48gBstiJXR">FUEL | FUEL/ATLAS</Menu.Item>
+              <Menu.Item key="8qtV9oq8VcrUHZdEeCJ2bUM3uLwjrfJ9U9FGrCSvu34z">AMMUNITION | AMMO/ATLAS</Menu.Item>
+              <Menu.Item key="32Pr4MhSD1K4J9buESjjbSZnXWLQ5oHFgB9MhEC2hp6J">TOOLKIT | TOOL/ATLAS</Menu.Item>
+              <Menu.Item key="AdL6nGkPe3snPb7TEgSjaN8qCG493iYQqv4DeoCqH53F">FOOD | FOOD/ATLAS</Menu.Item>
+              <Menu.Item key="D6rLbJLqi1VvV81ViPScgWiKYcZoTPnMiQTcrmH9X5oQ">FUEL | FUEL/ATLAS</Menu.Item>
             </Menu.ItemGroup>
           </Menu.SubMenu>
 
