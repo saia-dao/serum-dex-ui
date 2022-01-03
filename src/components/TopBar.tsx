@@ -164,7 +164,8 @@ export default function TopBar() {
           <Menu.SubMenu title="TOKENS">
               <Menu.Item key="Di66GTLsV64JgCCYGVcY21RZ173BHkjJVgPyezNN7P1K">Star Atlas | ATLAS/USDC </Menu.Item>
               <Menu.Item key="HxFLKUAmAMLz1jtT3hbvCMELwH5H9tpM2QugP8sKyfhW">Star Atlas DAO | POLIS/USDC </Menu.Item>
-            <Menu.Item key="6fk7SnxrF69fPkfMNnkjPXbxsqd8xzDfNpGWbtcdfhFX">Star Atlas DAO | POLIS/ATLAS</Menu.Item>
+              <Menu.Item key="6fk7SnxrF69fPkfMNnkjPXbxsqd8xzDfNpGWbtcdfhFX">Star Atlas DAO | POLIS/ATLAS</Menu.Item>
+              <Menu.Item key="6CGu3JKkqrcuRL1GajAwPoRqvkNcASpC6v9nqLtAuerk">Club City | CLUBCITY/ATLAS</Menu.Item>
           </Menu.SubMenu>
 
           <Menu.SubMenu title="COLLECTIBLE">
@@ -187,24 +188,25 @@ export default function TopBar() {
             </Menu.ItemGroup>
             <Menu.ItemGroup title="CREW GEAR">
               <Menu.Item key="6Y4bSkNwcugHzDc8eDSqDL9m15mQi9Mc8UncxVm5YZRX">VINTAGE ASTRONAUT SUIT | COVAS/USDC</Menu.Item>
+              <Menu.Item key="45SyRzGWW2cr3Y3637xzRh3Hr4KciMheQUpRphkcLoAX">TTT 300K FTX | FM-T3FTX/USDC</Menu.Item>
+              <Menu.Item key="5ovwY44rgJm1vYNmgAGnEjszhoULJqbCVrFiSS2a3T4c">NOBLE CLOAK | CONCC/USDC</Menu.Item>
               <Menu.Item key="GJtKxACMhWM9hNeX56RwNyCbE9Bet9zkRHDoLicLK9VK">ARMSTRONG PATCH | PCHAUP/USDC</Menu.Item>
               <Menu.Item key="7sEn3AMv5oHmbdXDXVfTTEthWEYdiaDWGAvkKcoygN7U">PHOTONIX PROVENANCE | FM-PP/USDC</Menu.Item>
               <Menu.Item key="ErC5ux4t4UA437h22GpYMEZEDjAUvx2m6aQJ4Fzjcc5n">TTT 300K SERUM  | FM-T3SR/USDC</Menu.Item>
+              <Menu.Item key="3KYW1LYzfZfBupRcuS7KjH84jCWdX1s42xvvDF3keGn2">TTT 300K RAYDIUM | FM-T3RAY/USDC</Menu.Item>
               <Menu.Item key="C5UdbBXYyeDFPcNjw9zQkcWadzP6tgKoCp7YxhqGcJp1">TTT 300K ATLAS | FM-T3ATL/USDC</Menu.Item>
-              <Menu.Item key="7PFvfkQip26mzD5gvipjNLqpyzFyR8qvrndF7u1jFfaq">NXT LE]V[EL DS BODYSUIT  | FM-NLDB/USDC</Menu.Item>
+              <Menu.Item key="CL5ScWqMDcy1dvvPXE4XAcBdTYDc8x8F8www29K2xNeA">TTT 300K PHANTOM | FM-T3PH/USDC</Menu.Item>
+              <Menu.Item key="99g7oerCB6QUP8BKhuKZP3T4RnacUV3Tkbs1f4Q3i3Av">TTT 300K THE_FAB_RIC_ANT  | FM-T3FAB/USDC</Menu.Item>
+              <Menu.Item key="BA1XAKTYjMJBzYbB1usSZXesj9FudygvJ4wSWSFMK6xV">NOBLE SIGNER | CONSO/USDC</Menu.Item>
               <Menu.Item key="Cgk6aeUfK78maSWdFLxdEW8BEsyGcvdLz7Cue6SjUk8J">REPLICATUR SHAWL | CORUS/USDC</Menu.Item>
+              <Menu.Item key="EJ8MX3M4xsgAn8uZkLNyp76zAqn9uY18NtitASoYoRyS">TTT 300K ANIMOCA | FM-T3ANI/USDC</Menu.Item>
+              <Menu.Item key="52HCo9MRuEj6sKRS9Me2UriCQvaeL4CQe7DkBSm1bW7K">COSMIC ORIGIN 92 | FM-CO92/USDC</Menu.Item>
               <Menu.Item key="HSJ8Jv8MsxxQrdspBtT4tQvTrerAynmCxSokBK7YC9UR">TTT 300K CRYPTOKICKERS | FM-T3CK/USDC</Menu.Item>
               <Menu.Item key="FbxKfbcKaMkHhzP69kUYRYDLHqppgiGEWhxb5bbFQX8z">PRIMORDIAL GLO | FM-PLG/USDC</Menu.Item>
+              <Menu.Item key="7PFvfkQip26mzD5gvipjNLqpyzFyR8qvrndF7u1jFfaq">NXT LE]V[EL DS BODYSUIT  | FM-NLDB/USDC</Menu.Item>
               <Menu.Item key="98238GZrjECJDpowVCn1EaYtJpR7o5HMszevTFD7brEp">TTT 300K SOLANA  | FM-T3SOL/USDC</Menu.Item>
               <Menu.Item key="GCsYJjV1BYtiaGyjFgkadutaNKYYDPDP8anP95h2tbTc">TTT 300K STEP.FINANCE | FM-T3STEP/USDC</Menu.Item>
-              <Menu.Item key="45SyRzGWW2cr3Y3637xzRh3Hr4KciMheQUpRphkcLoAX">TTT 300K FTX | FM-T3FTX/USDC</Menu.Item>
-              <Menu.Item key="5ovwY44rgJm1vYNmgAGnEjszhoULJqbCVrFiSS2a3T4c">NOBLE CLOAK | CONCC/USDC</Menu.Item>
-              <Menu.Item key="CL5ScWqMDcy1dvvPXE4XAcBdTYDc8x8F8www29K2xNeA">TTT 300K PHANTOM | FM-T3PH/USDC</Menu.Item>
-              <Menu.Item key="BA1XAKTYjMJBzYbB1usSZXesj9FudygvJ4wSWSFMK6xV">NOBLE SIGNER | CONSO/USDC</Menu.Item>
-              <Menu.Item key="52HCo9MRuEj6sKRS9Me2UriCQvaeL4CQe7DkBSm1bW7K">COSMIC ORIGIN 92 | FM-CO92/USDC</Menu.Item>
-              <Menu.Item key="3KYW1LYzfZfBupRcuS7KjH84jCWdX1s42xvvDF3keGn2">TTT 300K RAYDIUM | FM-T3RAY/USDC</Menu.Item>
-              <Menu.Item key="99g7oerCB6QUP8BKhuKZP3T4RnacUV3Tkbs1f4Q3i3Av">TTT 300K THE_FAB_RIC_ANT  | FM-T3FAB/USDC</Menu.Item>
-              <Menu.Item key="EJ8MX3M4xsgAn8uZkLNyp76zAqn9uY18NtitASoYoRyS">TTT 300K ANIMOCA | FM-T3ANI/USDC</Menu.Item>
+              <Menu.Item key="Ap5BX33uJcnAfpHPtfMQodJv7B5q1fcUfe5skjqBMRBR">COSMIC SOUNDS | COSSOU/ATLAS</Menu.Item>
             </Menu.ItemGroup>
             <Menu.ItemGroup title="EMOTE">
               <Menu.Item key="6U9c1n2GU7tRr8Bs7vcXoXACmmEQ87X6To3ie5H6rKyB">ANCIENT DANCE | TIGUEA/USDC</Menu.Item>
