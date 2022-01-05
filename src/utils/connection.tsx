@@ -7,15 +7,10 @@ import { ConnectionContextValues, EndpointInfo } from './types';
 
 export const ENDPOINTS: EndpointInfo[] = [
   {
-    name: 'genesysgo',
-    endpoint: 'https://staratlasexchange.genesysgo.net/',
+    name: 'devnet',
+    endpoint: 'https://api.devnet.solana.com',
     custom: false,
   },
-  {
-    name: 'serum',
-    endpoint: 'https://solana-api.projectserum.com',
-    custom: false,
-  }
 ];
 
 const accountListenerCount = new Map();
