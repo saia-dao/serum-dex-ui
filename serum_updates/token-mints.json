@@ -3,22 +3,22 @@
     "name": "SOLDEV",
     "address": "So11111111111111111111111111111111111111112"
   },
-  {
-    "name": "POLIS",
-    "address": "poLisWXnNRwC6oBu1vHiuKQzFjGL4XDSu4g9qjz9qVk"
-  },
+//  {
+//    "name": "POLIS",
+//    "address": "poLisWXnNRwC6oBu1vHiuKQzFjGL4XDSu4g9qjz9qVk"
+//  },
   {
     "name": "ATLAS",
-    "address": "ATLASXmbPQxBUYbxPsV97usA3fPQYEqzQBUHgiFCUsXx"
+    "address": "ATLASsbCSxrzrhHLX6KkYrARtBBZmezA9ndVLpQtHHdu"
   },
-  {
-    "name": "USDC",
-    "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
-  },
-  {
-    "name": "CLUBCITY",
-    "address": "26eGgM5zvx2HdmUtBqg3U4DKoZbMXJTkEaTJfQmqoAze"
-  },
+//  {
+//    "name": "USDC",
+//    "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+//  },
+//  {
+//    "name": "CLUBCITY",
+//    "address": "26eGgM5zvx2HdmUtBqg3U4DKoZbMXJTkEaTJfQmqoAze"
+//  },
   {
     "name": "PX4",
     "address": "7EjzhESeKT6Ys1prG4NSTfd836dgzaewrPNcroF24sw4"
